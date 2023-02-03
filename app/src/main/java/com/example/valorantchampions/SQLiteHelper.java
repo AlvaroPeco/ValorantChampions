@@ -22,7 +22,11 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+
+        db.execSQL(EstructuraBBDD.SQL_CREATE_ENTRIES_EQUIPOS);
         db.execSQL(EstructuraBBDD.SQL_DELETE_ENTRIES_EQUIPOS);
+
         db.execSQL(EstructuraBBDD.SQL_CREATE_ENTRIES_PARTIDOS);
+        db.execSQL(EstructuraBBDD.SQL_DELETE_ENTRIES_PARTIDOS);
     }
 }
