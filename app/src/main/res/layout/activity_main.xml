@@ -35,6 +35,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:backgroundTint="#EAE3AB"
+            android:onClick="entrarEquipos"
             android:text="Equipos"
             android:textColor="@color/black" />
 
