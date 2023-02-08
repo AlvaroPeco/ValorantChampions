@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
         helper=new SQLiteHelper(this);
         db = helper.getWritableDatabase();
         db.delete("Equipos", "_id>0", null);
-        crearEquipos();
         db.delete("Encuentros", "_id>0", null);
+        crearEquipos();
         crearEncuentros();
 
 

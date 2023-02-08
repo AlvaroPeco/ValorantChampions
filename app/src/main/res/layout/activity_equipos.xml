@@ -44,16 +44,15 @@
 
     </LinearLayout>
 
-    <ListView
-        android:id="@+id/listaEquipos"
-        android:layout_width="match_parent"
-        android:layout_height="600dp"
-        android:layout_weight="1" />
-
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
+
+    <ListView
+        android:id="@+id/listaEquipos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>
