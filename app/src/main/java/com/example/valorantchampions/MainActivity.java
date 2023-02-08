@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         crearEquipos();
 
 
+
     }
 
     public void crearEquipos(){
@@ -46,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
         insertaEquipos("xerxia", "Tailandia", -15, R.drawable.xerxia);
         insertaEquipos("Zeta Division", "Japon", -8, R.drawable.zeta);
     }
+
+
 
     public void insertaEquipos(String equipo, String ciudad, int puntos, int foto){
         ContentValues values = new ContentValues();
@@ -69,6 +72,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void entrarEquipos(View view){
         Intent i = new Intent(this, Equipos.class);
+        startActivity(i);
+    }
+
+    public void entrarClasi (View view){
+        Intent i = new Intent(this, Clasificacion.class);
         startActivity(i);
     }
 }

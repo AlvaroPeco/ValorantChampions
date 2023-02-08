@@ -21,6 +21,7 @@ public class EstructuraBBDD {
             + Partidos.COLUMN_NAME_PUNTUACION1 + " integer "
             + Partidos.COLUMN_NAME_PUNTUACION2 + " integer);";
 
+
     public static final String SQL_DELETE_ENTRIES_EQUIPOS =
             "DROP TABLE IF EXISTS " + EstructuraEquipos.TABLE_NAME_EQUIPOS;
     public static final String SQL_DELETE_ENTRIES_PARTIDOS =
