@@ -24,7 +24,8 @@ public class MainActivity extends AppCompatActivity {
         db = helper.getWritableDatabase();
         db.delete("Equipos", "_id>0", null);
         crearEquipos();
-
+        db.delete("Encuentros", "_id>0", null);
+        crearEncuentros();
 
 
     }
@@ -46,6 +47,23 @@ public class MainActivity extends AppCompatActivity {
         insertaEquipos("xSet", "Estados Unidos", 10, R.drawable.set);
         insertaEquipos("xerxia", "Tailandia", -15, R.drawable.xerxia);
         insertaEquipos("Zeta Division", "Japon", -8, R.drawable.zeta);
+    }
+
+    public void crearEncuentros(){
+        insertaEncuentros(1,"08-01-2022", "DRX","FUNPLUS PHOENIX",2, 0 );
+        insertaEncuentros(2,"10-01-2022", "LEVIATAN","LOUD",0, 2 );
+        insertaEncuentros(3,"12-01-2022", "OPTIC GAMING","TEAM LIQUID",2, 1 );
+        insertaEncuentros(4,"14-01-2022", "XSET","FNATIC",2, 0 );
+        insertaEncuentros(5,"16-01-2022", "FUNPLUS PHOENIX","LEVIATAN",2, 0 );
+        insertaEncuentros(6,"18-01-2022", "TEAM LIQUID","FNATIC",0, 2 );
+        insertaEncuentros(7,"20-01-2022", "DRX","LOUD",0, 2 );
+        insertaEncuentros(8,"22-01-2022", "OPTIC GAMING","XSET",2, 1 );
+        insertaEncuentros(9,"24-01-2022", "XSET","FUNPLUS PHOENIX",1, 2 );
+        insertaEncuentros(10,"26-01-2022", "DRX","FNATIC",2, 1 );
+        insertaEncuentros(11,"28-01-2022", "FUNPLUS PHOENIX","DRX", 0, 2 );
+        insertaEncuentros(12,"30-01-2022", "LOUD","OPTIC GAMING",2, 0 );
+        insertaEncuentros(13,"02-02-2022", "OPTIC GAMING","DRX",3, 2 );
+        insertaEncuentros(14,"08-02-2022", "LOUD","OPTIC GAMING",3, 1 );
     }
 
 
@@ -77,6 +95,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void entrarClasi (View view){
         Intent i = new Intent(this, Clasificacion.class);
+        startActivity(i);
+    }
+
+    public void entrarEncuentros (View view){
+        Intent i = new Intent(this, Encuentros.class);
         startActivity(i);
     }
 }

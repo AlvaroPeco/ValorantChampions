@@ -15,7 +15,6 @@ public class Clasificacion extends AppCompatActivity {
     SQLiteHelper helper;
     SQLiteDatabase db;
     ListView lv;
-    String posicion="1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

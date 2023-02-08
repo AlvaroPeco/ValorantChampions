@@ -57,23 +57,4 @@ public class Equipos extends AppCompatActivity {
         db.close();
     }
 
-    public void consultaEquiposPuntos (){
-        helper = new SQLiteHelper(this);
-        db = helper.getReadableDatabase();
-
-        Cursor cursor =
-                db.query(EstructuraBBDD.EstructuraEquipos.TABLE_NAME_EQUIPOS, null,
-                        null, null, null, null, EstructuraBBDD.EstructuraEquipos.COLUMN_NAME_PUNTOS + " DESC");
-
-        String [] from = {EstructuraBBDD.EstructuraEquipos.COLUMN_NAME_EQUIPO,
-                EstructuraBBDD.EstructuraEquipos.COLUMN_NAME_CIUDAD,
-                EstructuraBBDD.EstructuraEquipos.COLUMN_NAME_PUNTOS,
-                EstructuraBBDD.EstructuraEquipos.COLUMN_FOTO_FOTO};
-        int[] to = {R.id.textView, R.id.textView2,R.id.textView3, R.id.imagenClasi};
-        SimpleCursorAdapter adaptador = new SimpleCursorAdapter(this,
-                R.layout.lista, cursor, from, to,
-                CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER);
-        lv.setAdapter(adaptador);
-        db.close();
-    }
 }

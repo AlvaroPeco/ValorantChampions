@@ -57,6 +57,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:backgroundTint="#EAE3AB"
+            android:onClick="entrarEncuentros"
             android:text="Encuentros"
             android:textColor="@color/black" />
     </LinearLayout>
