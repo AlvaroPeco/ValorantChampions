@@ -32,7 +32,7 @@ public class Equipos extends AppCompatActivity {
         puntos = findViewById(R.id.textPuntos);
         foto= findViewById(R.id.imageView);
 
-        lv = findViewById(R.id.listaM);
+        lv = findViewById(R.id.listaEquipos);
         // mostrarTabla();
         consultaEquipos();
     }
@@ -46,11 +46,11 @@ public class Equipos extends AppCompatActivity {
                 db.query(EstructuraBBDD.EstructuraEquipos.TABLE_NAME_EQUIPOS, null,
                         null, null, null, null, null);
 
-        String[] from = {EstructuraBBDD.EstructuraEquipos.COLUMN_NAME_EQUIPO,
+        String [] from = {EstructuraBBDD.EstructuraEquipos.COLUMN_NAME_EQUIPO,
                 EstructuraBBDD.EstructuraEquipos.COLUMN_NAME_CIUDAD,
                 EstructuraBBDD.EstructuraEquipos.COLUMN_NAME_PUNTOS,
                 EstructuraBBDD.EstructuraEquipos.COLUMN_FOTO_FOTO};
-        int[] to = {R.id.textNombre, R.id.textCiudad,R.id.textPuntos, R.id.imageView};
+        int[] to = {R.id.textView, R.id.textView2,R.id.textView3, R.id.imageView2};
         SimpleCursorAdapter adaptador = new SimpleCursorAdapter(this,
                 R.layout.lista, cursor, from, to,
                 CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER);
