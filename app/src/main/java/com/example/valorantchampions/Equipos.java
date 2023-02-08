@@ -30,6 +30,8 @@ public class Equipos extends AppCompatActivity {
         nombreEquipo = findViewById(R.id.textNombre);
         ciudad = findViewById(R.id.textCiudad);
         puntos = findViewById(R.id.textPuntos);
+        foto= findViewById(R.id.imageView);
+
         lv = findViewById(R.id.listaM);
         // mostrarTabla();
         consultaEquipos();
