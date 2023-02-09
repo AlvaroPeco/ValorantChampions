@@ -15,14 +15,41 @@ public class Encuentros extends AppCompatActivity {
     SQLiteHelper helper;
     SQLiteDatabase db;
     ListView lv;
+    TextView texto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_encuentros);
         lv = findViewById(R.id.listaEncuentros);
+        texto=findViewById(R.id.textView4);
+        helper=new SQLiteHelper(this);
+        db = helper.getWritableDatabase();
         consultaEncuentros();
+
+        // Cursor cursor2 = db.query("Encuentros", null, null, null, null,null, null);
+        // mostrarTabla(cursor2);
+        // db.close();
+
     }
+
+    public void mostrarTabla(Cursor c) {
+        //los mostramos en el cuadro de texto que tenemos en el layout
+        texto.append("\n Tabla encuentros \n-----------");
+        c.moveToFirst();
+        int nfilas=c.getCount();
+        int ncolumnas=c.getColumnCount();
+        String fila="\n";
+        for (int i = 0; i < nfilas; i++) {
+            fila="\n";
+            for(int j=0;j<ncolumnas;j++){
+                fila=fila+c.getString(j)+" ";
+            }
+            texto.append(fila);
+            c.moveToNext();
+        }
+    }
+
     public void consultaEncuentros (){
         helper = new SQLiteHelper(this);
         db = helper.getReadableDatabase();
