@@ -102,4 +102,8 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, Encuentros.class);
         startActivity(i);
     }
+    public void insertarEquipos (View view){
+        Intent i = new Intent(this, insertar_equipos.class);
+        startActivity(i);
+    }
 }

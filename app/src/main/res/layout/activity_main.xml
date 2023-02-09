@@ -8,6 +8,53 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_weight="1"
+        android:backgroundTint="#D05B5B">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnInsertar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#E9E2AA"
+                android:onClick="insertarEquipos"
+                android:text="Insertar"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnEliminar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#E9E2AA"
+                android:text="Eliminar"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnModi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#E9E2AA"
+                android:text="Modificar"
+                android:textColor="#000000"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </com.google.android.material.navigation.NavigationView>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -20,6 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:srcCompat="@drawable/valorantchampions" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -46,8 +94,8 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:backgroundTint="#EAE3AB"
-            android:text="Clasificacion"
             android:onClick="entrarClasi"
+            android:text="Clasificacion"
             android:textColor="@color/black" />
 
         <Button
