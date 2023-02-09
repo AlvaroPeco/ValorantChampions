@@ -106,4 +106,9 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, insertar_equipos.class);
         startActivity(i);
     }
+
+    public void eliminarEquipos (View view){
+        Intent i = new Intent(this, eliminar_equipos.class);
+        startActivity(i);
+    }
 }

@@ -13,6 +13,13 @@
         android:theme="@style/Theme.ValorantChampions"
         tools:targetApi="31">
         <activity
+            android:name=".eliminar_equipos"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".insertar_equipos"
             android:exported="false">
             <meta-data
